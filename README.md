@@ -1,3 +1,3 @@
 # FreeCodeCamp Course Solutions
 
-This project contains my take on the solutions on the challenges found on the FreeCodeCamp course outline.
+This project contains my take on on the challenges found on the FreeCodeCamp course outline.
