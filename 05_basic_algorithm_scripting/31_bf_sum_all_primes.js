@@ -13,6 +13,7 @@ function sumPrimes(num) {
         // check divisibility
         var isPrime = true;
         if (val === 2) { return val; } // 2 is automatically a prime
+        // we are only looping til Math.sqrt since values after will yield the reverse results
         for (var i=2;i<=Math.sqrt(val)+1;i++) {
           if (val % i === 0) { isPrime = false; break; }
         }
