@@ -5,6 +5,9 @@ function largestOfFour(arr) {
     return list.reduce(function(c,i) {
       if (c > i) { return c; } else { return i; }
     });
+
+    // an alternate to reduce would be to use the Math.max function ie
+    // return Math.max.apply(null, list);
   });
   console.log(result);
   return result;
