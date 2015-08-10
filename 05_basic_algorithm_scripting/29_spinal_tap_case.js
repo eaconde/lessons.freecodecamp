@@ -5,7 +5,7 @@ function spinalCase(str) {
     // --David St. Hubbins
     var newStr = str.replace(/([A-Z])/g, function(match, _, index) {
         var previous = str[index - 1];
-        if (previous.match(/[\s|\_]/g).length > 0 || previous === undefined) {
+        if (previous === " " || previous === "_" || previous === undefined) {
             return match;
         } else {
             return " ".concat(match); // add space when uppercased
