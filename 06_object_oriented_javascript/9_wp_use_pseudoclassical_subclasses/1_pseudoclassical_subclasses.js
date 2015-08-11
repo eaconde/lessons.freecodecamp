@@ -3,7 +3,7 @@
 var Car = function(loc) {
   this.loc = loc
 };
-Car.prototype.move = function() { this.loc++; };
+Car.prototype.move = function() { console.log('moving...');this.loc++; };
 
 // ===================================
 // Subclass
@@ -29,9 +29,15 @@ Van.prototype.constructor = Van;
 // as usual, we add other methods specific to the subclass in the prototype chain.
 Van.prototype.grab = function() { console.log('grabbing...'); };
 
-
 var zed = new Car(3); // I'm a superclass
 zed.move();
+
 var amy = new Van(9); // I'm a subclass
+// NOTE: if we haven't implemented the constructor reassignment above, the result
+//  for this would have been Car.
+console.log(amy.constructor);
+
+// NOTE: the move method below would have been unavailable if we did not assisgn
+//  the Car.prototype to the Van.prototype
 amy.move();
 amy.grab();
