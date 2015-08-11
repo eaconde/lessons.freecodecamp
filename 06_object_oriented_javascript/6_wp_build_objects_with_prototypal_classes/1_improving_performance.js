@@ -14,7 +14,7 @@ Car.methods = {
 };
 
 // ======================================
-// using protypes...
+// using protypes... (pseudo-classical pattern)
 var Car = function(loc) {
   var obj = Object.create(Car.prototype);
   obj.loc = loc;
