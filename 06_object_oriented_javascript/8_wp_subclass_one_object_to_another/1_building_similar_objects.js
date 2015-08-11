@@ -13,7 +13,7 @@
 var Van = function(loc) {
   var obj = {loc: loc};
   obj.move = function() { obj.loc++; };
-  obj.grab = function() { console.log('calling...'); };
+  obj.grab = function() { console.log('grabbing...'); };
   return obj;
 };
 
