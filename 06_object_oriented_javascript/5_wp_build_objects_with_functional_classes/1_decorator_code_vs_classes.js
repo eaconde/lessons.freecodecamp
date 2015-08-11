@@ -1,5 +1,3 @@
-
-// decorator code requires the oj
 // A class builds the object that it is going to augment vs decorator requires the object as its input
 
 /************************************
