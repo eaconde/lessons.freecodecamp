@@ -10,6 +10,9 @@ var itemInArray = movieLists[0];
 Furthermore, you're not allowed to use indexers in any of the remaining exercises unless you're implementing one of the five functions. There is a very good reason for this restriction, and that reason will eventually be explained. For now, you'll simply have to accept it on faith that this restriction serves a purpose.
 */
 
+// add minified version of Array.prototype.concatAll | exercise 10
+Array.prototype.concatAll=function(){var n=[];return this.forEach(function(o){o.forEach(function(o){n.push(o)})}),n};
+
 var movieLists = [{
   name: "Instant Queue",
   videos: [{
