@@ -1,0 +1,218 @@
+html,
+body {
+  margin: 0 auto;
+  background: #dde2e3;
+  color: #01243B;
+  width: 300px;
+  min-height: 680px;
+  height: 100%;
+}
+
+.content {
+  font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  overflow: hidden;
+  background: white;
+  height: 100%;
+}
+
+p {
+  color: #8e8919;
+}
+
+ul {
+  padding: 0px;
+  overflow: hidden;
+}
+
+li {
+  position: relative;
+  display: inline-block;
+  padding: 15px 0px 15px 0px;
+  margin: 0px !important;
+  margin-bottom: 15px !important;
+  text-align: center;
+  font-size: .9em;
+  font-weight: 700;
+  width: 33.3%;
+  float: left;
+  background: #8e8919;
+}
+
+ul > li.active:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #8e8919;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.online {
+  border-style: solid;
+  border-width: 0px 1px 0px;
+  border-color: #d1d9dc;
+}
+
+.cleared {
+  clear: both;
+}
+
+a {
+  color: #d1d9dc !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.search {
+  clear: both;
+  margin: 10px 5px 0px 5px;
+}
+
+input {
+  color: #8e8919 !important;
+}
+
+hr {
+  margin-top: 15px !important;
+}
+
+#twitchUser {
+  /* position:fixed; */
+  /* margin-top: 20px !important; */
+
+  height: 490px;
+  overflow-y: auto;
+}
+
+.row {
+  margin: 0px !important;
+  margin-bottom: 5px !important;
+}
+
+p.twitch-user {
+  font-size: 15px;
+  margin: 8px 0px 0px 0px;
+}
+
+p.twitch-stream {
+  font-size: 10px;
+  font-style: italic;
+  font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+}
+
+.userImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.status {
+  margin-top: 15px;
+}
+
+.footer {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background: #8e8919;
+  padding: 10px 0px 10px 0px;
+}
+
+.footer.p {
+  font-color: #d1d9dc;
+}
+
+
+
+
+/*modals*/
+/*======================================*/
+
+.modal {
+  padding-top: 150px;
+  margin-left: 15px;
+}
+
+.modal-content {
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 6px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 40px rgba(0,0,0,.5);
+    box-shadow: 0 0 40px rgba(0,0,0,.5);
+    color: #000;
+    background-color: #fff;
+    border: rgba(0,0,0,0);
+}
+.modal-message .modal-dialog {
+    width: 300px;
+}
+.modal-message .modal-body, .modal-message .modal-footer, .modal-message .modal-header, .modal-message .modal-title {
+    background: 0 0;
+    border: none;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center!important;
+}
+
+.modal-message .modal-title {
+    font-size: 17px;
+    color: #737373;
+    margin-bottom: 3px;
+}
+
+.modal-message .modal-body {
+    color: #737373;
+}
+
+.modal-message .modal-header {
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 15px 0 8px;
+}
+.modal-message .modal-header .mdi,
+.modal-message .modal-header
+.glyphicon, .modal-message
+.modal-header .typcn, .modal-message .modal-header .wi {
+    font-size: 30px;
+}
+
+.modal-message .modal-footer {
+    margin: 25px 0 20px;
+    padding-bottom: 10px;
+}
+
+.modal-backdrop.in {
+    zoom: 1;
+    filter: alpha(opacity=75);
+    -webkit-opacity: .75;
+    -moz-opacity: .75;
+    opacity: .75;
+}
+.modal-backdrop {
+    background-color: #fff;
+}
+.modal-message.modal-info .modal-header {
+    color: #8e8919;
+    border-bottom: 3px solid #8e8919;
+}
+.modal-message.modal-warning .modal-header {
+    color: #f4b400;
+    border-bottom: 3px solid #ffce55;
+}

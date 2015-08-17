@@ -1,0 +1,119 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Twitch TV - Contacts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <link href="//cdn.materialdesignicons.com/1.1.70/css/materialdesignicons.min.css" rel="stylesheet">
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+</head>
+
+<body>
+
+  <div class="content">
+    <!--Add Twitch User Modal Templates-->
+    <div id="modal-newuser" class="modal modal-message modal-info fade" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="mdi mdi-account"></i>
+                </div>
+                <div class="modal-title">Twitch.tv User</div>
+
+                <div class="modal-body"><input type="text" placeholder="Twitch.tv username" id="newTwitchUser" class="form-control" aria-label="Tag"/></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="addNewUser">OK</button>
+                </div>
+            </div> <!-- / .modal-content -->
+        </div> <!-- / .modal-dialog -->
+    </div>
+    <!--End Add Twitch User Modal Templates-->
+
+
+    <!--Danger Modal Templates-->
+    <div id="modal-warning" class="modal modal-message modal-warning fade" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="mdi mdi-alert"></i>
+                </div>
+                <div class="modal-title">Warning</div>
+
+                <div class="modal-body">User gone missing!</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">OK</button>
+                </div>
+            </div> <!-- / .modal-content -->
+        </div> <!-- / .modal-dialog -->
+    </div>
+    <!--End Danger Modal Templates-->
+
+
+    <div class="top">
+      <div class="navigation">
+        <ul class="nav-menu">
+          <li class="navs active"><a href="#">All</a></li>
+          <li class="navs online"><a href="#">Online</a></li>
+          <li class="navs"><a href="#">Offline</a></li>
+        </ul>
+      </div>
+      <div class="cleared"></div>
+
+      <div class="search">
+        <div class="input-group">
+          <span class="input-group-addon">
+        <i class="mdi mdi-magnify"></i>
+          </span>
+          <input id="textSearch" type="text" class="form-control" aria-label="Tag">
+        </div>
+
+      </div>
+
+      <hr />
+
+      <!--handlebars.js contacts template-->
+      <div class="contacts">
+        <div id="twitchUser">
+          <script id="twitchUserTemplate" type="text/x-handlebars-template">
+            {{#each user}} {{#with this}}
+            <div class="row">
+              <a href="http://twitch.tv/{{user_id}}" target="_blank">
+                <div class="col-xs-3">
+                  <img class="userImage" src="{{this.profile_pic}}"> </img>
+                </div>
+                <div class="col-xs-7">
+                  <p class="twitch-user">{{username}}</p>
+                  <p class="twitch-stream">{{stream}}</p>
+                </div>
+                <div class="col-xs-2 status">
+                  {{#if stream}}
+                  <p><i class="mdi mdi-checkbox-marked-circle-outline"></i></p>
+                  {{else}}
+                  <p><i class="mdi mdi-checkbox-blank-circle-outline"></i></p>
+                  {{/if}}
+                </div>
+              </a>
+            </div>
+            {{/with}} {{/each}}
+          </script>
+        </div>
+      </div>
+      <div class="footer">
+        <a href="#modal-newuser" data-toggle="modal" data-target="#modal-newuser">Add Streamers</a>
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
