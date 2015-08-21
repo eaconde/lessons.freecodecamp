@@ -11,5 +11,15 @@
     this.products = gems;
   });
 
-
 })();
+
+/*============================================
+** Directives - HTML annotations that trigger JS behaviours
+**
+** Modules - Where application components live
+**
+** Controllers - Where we add application behaviour
+**
+** Expression - How values get displayed within the page
+**
+============================================*/
