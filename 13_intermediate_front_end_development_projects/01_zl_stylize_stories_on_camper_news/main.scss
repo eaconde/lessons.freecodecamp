@@ -1,0 +1,218 @@
+// http://codepen.io/eaconde/pen/xGoQRR
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background: #457e86;
+  /*$primary-color;*/
+  color: #333;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.container {
+  position: relative;
+  top: 150px;
+}
+
+#camper-header {
+  font-family: "Lobster", cursive;
+  font-size: 36px;
+}
+
+.search {
+  width: 100%;
+  position: fixed;
+  background: #333;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.search h1,
+.search div {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
+
+.glyphicon {
+  color: #dedede !important;
+}
+
+.search img {
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+#searchText {
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+#articles-wrap {
+  text-align: center;
+}
+
+#newsItem {
+  height: 250px;
+}
+
+#headline {
+  height: 20%;
+}
+#headline h5 {
+  font-weight: 500px;
+}
+
+#author {
+  height: 10%;
+}
+
+#img-wrap {
+  height: 70%;
+  border: 1px solid #dedede;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+ul.rig {
+  list-style: none;
+  font-size: 0px;
+  margin-left: -2.5%;
+  /* should match li left margin */
+}
+
+ul.rig li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 2.5% 2.5%;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-shadow: 0 0 5px #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+ul.rig li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+  border: 1px solid #cdcab7;
+}
+
+ul.rig li h3 {
+  margin: 0 0 5px;
+}
+
+ul.rig li p {
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #999;
+}
+
+/* class for 2 columns */
+ul.rig.columns-2 li {
+  width: 47.5%;
+  /* this value + 2.5 should = 50% */
+}
+
+/* class for 3 columns */
+ul.rig.columns-3 li {
+  width: 30.83%;
+  /* this value + 2.5 should = 33% */
+}
+
+/* class for 4 columns */
+ul.rig.columns-4 li {
+  width: 22.5%;
+  /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+
+  ul.grid-nav li a {
+    display: block;
+  }
+
+  ul.rig {
+    margin-left: 0;
+  }
+
+  ul.rig li {
+    width: 100% !important;
+    /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
+}
+.ui-tooltip, .arrow:after {
+  background: black;
+  border: 2px solid white;
+}
+
+.ui-tooltip {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  font: bold 14px "Helvetica Neue", Sans-Serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+}
+
+.arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+
+.arrow.top {
+  top: -16px;
+  bottom: auto;
+}
+
+.arrow.left {
+  left: 20%;
+}
+
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.arrow.top:after {
+  bottom: -20px;
+  top: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  .container {
+    top: 190px;
+  }
+}
