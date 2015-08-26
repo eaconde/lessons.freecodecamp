@@ -1,0 +1,43 @@
+<html ng-app="wikiApp">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+</head>
+
+<body ng-controller="SearchController as searchCtrl">
+  <div class="container">
+    <div id="header">
+      <img id="wiki-logo" src="http://www.officialpsds.com/images/thumbs/WikiPedia-Logo-psd64607.png" alt="" />
+      <h1>Wikipedia Viewer</h1>
+    </div>
+
+    <div id="searchText" class="form-group has-feedback">
+      <input id="search" name="search" type="text" class="form-control" ng-model="searchText" post-function="searchWikiTitles" placeholder="Search" ng-complete ng-enter="wikiSearch(searchText)" list="_wikis">
+      <span class="glyphicon glyphicon-search form-control-feedback"></span>
+      <!--<span class="glyphicon glyphicon-chevron-down form-control-feedback"></span>-->
+      <datalist id="_wikis" ng-show="searching">
+        <select ng-model="selectedTitle">
+          <option ng-repeat="wikiTitle in wikiTitles" value="{{wikiTitle}}">{{wikiTitle}}</option>
+        </select>
+      </datalist>
+    </div>
+
+    <hr class="styled"/>
+
+    <div id="searchResults" ng-show="loaded">
+      <div ng-repeat="wiki in wikis" class="bs-callout bs-callout-dark" ng-mouseenter="hovered=true" ng-mouseleave="hovered=false">
+        <!--ng-class="{true:'bs-callout-warning' ,false: 'bs-callout-dark'}[hovered]" -->
+        <a href="https://en.wikipedia.org/wiki/{{wiki.title}}" target="_blank"><h3>{{wiki.title}}</h3></a>
+        <p>{{wiki.extract}}</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-animate.min.js"></script>
+
+</body>
+
+</html>
