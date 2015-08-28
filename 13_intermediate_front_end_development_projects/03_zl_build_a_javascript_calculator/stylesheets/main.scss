@@ -1,0 +1,208 @@
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+// Font Variables
+$roboto-slab: 'Roboto Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+// Color Variables
+$color1: #000; //black
+$color2: #fff; //white
+$color3: #333; //grey
+$color4: #777; //lighter grey shade
+$color5: #2a86bb; //light blue
+$color6: #999; //lightest grey shade
+$color7: #8a33d7;
+
+// Styles
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: $open-sans;
+
+  background: url('http://bit.ly/1F0dw9d') no-repeat center center;
+  background-size: cover;
+
+
+  // prevent click highlighting of text
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+
+#container {
+  width: 320px;
+  height: 568px;
+  margin: 20px auto 100px;
+  background: $color1;
+  color: $color2;
+  padding: 45px 4px 45px 4px;
+  border-radius: 45px;
+
+}
+
+.phone {
+  border-radius: 15px;
+  background: #2b2b2b; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #2b2b2b 1%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(1%,#2b2b2b), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #2b2b2b 1%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #2b2b2b 1%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #2b2b2b 1%,#000000 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #2b2b2b 1%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b2b', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /*position: relative;
+  margin: 25px auto;
+  width: 100%;
+  height: 500px;*/
+  box-shadow: inset 0px 2px 4px 3px rgba(255,255,255, .1), 3px 3px 15px rgba(0,0,0, .5);
+  border: 1px solid #333;
+}
+
+
+#phone_screen {
+  height: 500px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  vertical-align: center;
+}
+a:active {
+  background: $color5 !important;
+}
+
+#screen {
+  height: 25%;
+
+  p {
+    width: auto;
+    height: 100%;
+  }
+
+  #eq {
+    height: 40%;
+  }
+  #eqValue {
+    background: $color3 !important;
+    padding: 5px;
+    text-align: right;
+    overflow:hidden;
+    text-overflow:clip;
+  }
+
+  #numValue {
+    width: 320px;
+    height: auto;
+    display: table-cell;
+    padding: 10px 5px 0px 0px;
+    background: $color1;
+    color: $color2;
+    font-family: $open-sans;
+    font-size: 30px;
+    text-align: right;
+    overflow:hidden;
+    text-overflow:clip;
+  }
+}
+
+#digits {
+  height: 75%;
+  /*border-color: $color5;*/
+
+  .row {
+     width: 100%;
+  }
+
+  .dbtn {
+    width: 25%;
+    height: 71px;
+    float: left;
+    /* border: 1px solid $color6; */
+  }
+
+  #back-img {
+    width: 40px;
+    height: auto;
+    color: white;
+  }
+
+
+  .btn {
+    font-family: $open-sans;
+    font-size: 30px;
+    float: left;
+    display: inline-block;
+    width: 79px;
+    height: 39px;
+    padding: 15px 0px;
+    margin: 0px;
+    background: $color4;
+    color: $color2;
+    text-align: center;
+  }
+
+  .double {
+    width: 159px;
+  }
+
+  .btn-small {
+    padding: 5px 0px;
+    height: 35px;
+    font-size: 26px;
+  }
+
+  .btn-dark {
+    color: $color5;
+    background-color: #262626;
+  }
+
+  .operator {
+    background: $color3;
+  }
+
+  #equals {
+    background: lighten(red, 15%);
+    color: $color1;
+  }
+}
+
+
+.bordered {
+  border-style: solid !important;
+  border-width: 1px;
+  border-left: 0px;
+  border-top: 0px;
+  border-color: $color6;
+}
+.no-right {
+  border-right: 0px;
+}
+.no-bottom {
+  border-bottom: 0px;
+}
+
+
+.button{
+  position: relative;
+  height: 60px;
+  width: 60px;
+  background: black;
+  border-radius: 60px;
+  bottom: 170px;
+  margin: 0 auto;
+  box-shadow: 0 0 3px 0px rgba(255,255,255, .2);
+}
+.inner-button{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: #000;
+  top: 20px;
+  left: 20px;
+  box-shadow: inset 0 0 1px 2px rgba(255,255,255, .2);
+}
